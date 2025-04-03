@@ -208,11 +208,111 @@
 
 // document.write(`Your weight is: ${updatedWeight}.<br><br>`);
 
-// Question 08:
-var hidden=(Math.random()*10)+1;
+// // Question 08:
+// var hidden=(Math.random()*10)+1;
 
-var userGuess=+prompt("Guess the number between 1 to 10:");
+// var userGuess=+prompt("Guess the number between 1 to 10:");
 
-if(userGuess === Math.round(hidden)) {
-    alert("Congratulations! You guessed the hidden number :)");
-}
+// if(userGuess === Math.round(hidden)) {
+//     alert("Congratulations! You guessed the hidden number :)");
+// }
+
+
+// ------------------------------------------CHAPTER 31-34---------------------------------------------------------------
+
+// // Question 01:
+var date = new Date();
+// document.write(date);
+
+// // Question 02:
+// var currMonth = date.getMonth();
+// var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+// alert(`Current Month: ${months[currMonth]}`);
+
+// // Question 03:
+// var currDay = date.getDay();
+// var days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+// alert(`Today is ${days[currDay]}`);
+
+// // Question 04:
+// if(currDay===0 || currDay===6) {
+//     alert("It's fun day!");
+// }
+
+// // Question 05:
+// var currDate = date.getDate();
+// if(currDate<16) {
+//     alert("First fifteen days of the month.");
+// }
+// else {
+//     alert("Last days of the month.");
+// }
+
+// // Question 06:
+// var mSecNow = Date.now();
+// var minNow = mSecNow / (1000*60);
+// document.write(`Current Date: ${date}<br>Elapsed miliseconds since January 1, 1970: ${mSecNow}<br>Elapse minutes since January 1, 1970: ${minNow}<br><br>`);
+
+// // Question 07:
+// var hours = new Date().getHours();
+// if(hours>=12) {
+//     alert("It's PM.");
+// }
+// else {
+//     alert("It's AM.");
+// }
+
+// // Question 08:
+// var laterDate = new Date("Dec 31 2020");
+// document.write(`Later Date: ${laterDate}.<br><br>`);
+
+// // Question 09:
+// var ramStart25 = new Date("Mar 2 2025");
+// var ramStart15 = new Date("Jun 18 2015");
+// var timeDiff = ramStart25 - ramStart15;
+// var daysPast = Math.floor(timeDiff/(1000*24*3600));
+
+// alert(`${daysPast} days have passed since 1st Ramadan, 2015.`);
+
+// // Question 10:
+// var refDate = new Date("Dec 5 2015 22:50:16");
+// var start15 = new Date("Jan 1 2015");
+// var timeDiff = refDate - start15;
+// var timeDiffSec = Math.floor(timeDiff/1000);
+// document.write(`On reference date ${refDate}, <br>${timeDiffSec} seconds had passed since beginning of 2015.<br><br>`);
+
+// // Question 11:
+// var currDate = new Date();
+// var currHours = currDate.getHours();
+// currDate.setHours(currHours + 1);
+
+// document.write(`Current date: ${currDate}<br>1 hour ago, it was ${new Date()}<br><br>`);
+
+// // Question 12:
+// var currDate = new Date();
+// var currYear = currDate.getFullYear();
+// currDate.setFullYear(currYear-100);
+
+// alert(`Current Date: ${new Date()}\n\n100 years back, it was ${currDate}.`);
+
+// // Question 13:
+// var age=+prompt("Enter your age:");
+// var currYear = new Date().getFullYear();
+// var birthYear = currYear - age;
+
+// document.write(`Your age is: ${age}.<br>Your birth year is: ${birthYear}.<br><br>`);
+
+// Question 14:
+var cusName = prompt("Enter your name:");
+var currMonth = new Date().getMonth();
+var months=["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+var unitsNo = +prompt("Enter number of units:");
+var chargesPerUnit = +prompt("Enter charges per unit:");
+var netAmountPayable = unitsNo * chargesPerUnit;
+var latePayment = 350;
+var grossAmount = netAmountPayable + latePayment;
+
+document.write(`<h1>K-Electric Bill</h1>Customer name: <b>${cusName}</b><br>Month: <b>${months[currMonth]}</b><br>Number of units: <b>${unitsNo}</b><br>Charges per unit: <b>${chargesPerUnit}</b><br><br>Net Amount Payable (within due date): <b>${netAmountPayable}</b><br>Late payment surcharge: <b>${latePayment}</b><br>Gross Amount Payable (after due date): <b>${grossAmount}</b>`);
+
+
+
